@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="TestController">
+
+    <div class="flex-container">
+        <div class="navigation">Navigation</div>
+        <div class="content">
+            <div class="lhs-panel" ng-click="selectSideBar()" ng-class="{'collapsed': selectedSideBar}">
+                <div ng-hide="selectedSideBar">Sidebar</div>
+            </div>
+            <div class="rhs-panel">
+                <div class="panel" id="block1" ng-click="selectBlock(1)" ng-class="{'collapsed': selectedBlock && selectedBlock !== 1}">
+                    <div ng-hide="selectedBlock && selectedBlock !== 1">Block 1</div>
+                </div>
+                <div class="panel" id="block2" ng-click="selectBlock(2)" ng-class="{'collapsed': selectedBlock && selectedBlock !== 2}">
+                    <div ng-hide="selectedBlock && selectedBlock !== 2">Block 2</div>
+                </div>
+                <div class="panel" id="block3" ng-click="selectBlock(3)" ng-class="{'collapsed': selectedBlock && selectedBlock !== 3}">
+                    <div ng-hide="selectedBlock && selectedBlock !== 3">Block 3</div>
+                </div>
+                <div class="panel" id="block4" ng-click="selectBlock(4)" ng-class="{'collapsed': selectedBlock && selectedBlock !== 4}">
+                    <div ng-hide="selectedBlock && selectedBlock !== 4">Block 4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
